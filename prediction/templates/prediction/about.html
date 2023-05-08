@@ -1,0 +1,139 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <link rel="stylesheet" type="text/css" href="{% static 'prediction/aboutDesign.css' %}">
+      <script src="{% static 'prediction/script.js' %}" defer></script>
+      <link rel="shortcut icon" type="image/x-icon" href="{% static 'prediction/favicon.ico' %}">
+
+      <link href='https://fonts.googleapis.com/css?family=Carter One' rel='stylesheet'>
+      <link href='https://fonts.googleapis.com/css?family=Righteous' rel='stylesheet'>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+      <title>About-Rent Prediction System</title>
+  </head>
+  <body>
+        <div class="navbar" id="myNavbar">
+            <a href="{% url 'prediction-home' %}"><i class="fas fa-home"></i> Home</a>
+            <a href="{% url 'prediction-about' %}"><i class="fas fa-address-card"></i> About</a>
+            </a>
+        </div>
+        <div class="container">
+            <div class="about heading hidden">
+                About
+            </div>
+            <div class="about first hidden">
+                The RentPrediction system is a collaborative project created by two developers - 
+                <a href="https://linkedin.com/in/saurav-md" target="_blank">Saurav</a> and <a href="https://linkedin.com/in/prateek-chand-7b1b08247" target="_blank">Prateek</a>. The aim of this project is to 
+                provide a simple yet efficient solution for predicting rent prices in Manhattan, Brooklyn, and 
+                Queens-based on user inputs.
+            </div>
+            <div class="about libraries-used hidden">
+                <h2 class="hidden">Libraries Used:</h2>
+                <div class="library">
+                    <a href="https://www.djangoproject.com/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Django_logo.svg" alt="django" width="150" height="auto">
+                    </a>
+                </div>
+                <div class="library">
+                    <a href="https://pandas.pydata.org/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pandas_logo.svg/1200px-Pandas_logo.svg.png" alt="pandas" width="150" height="auto">
+                    </a>
+                </div>
+                <div class="library">
+                    <a href="https://scikit-learn.org/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Scikit_learn_logo_small.svg/1200px-Scikit_learn_logo_small.svg.png" alt="scikit-learn" width="150" height="auto">
+                    </a>
+                </div>
+                <div class="library">
+                    <a href="https://numpy.org/" target="_blank">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/NumPy_logo_2020.svg" alt="numpy" width="150" height="auto">
+                    </a>
+                </div>
+            </div>
+            <div class="about second hidden">
+                <div class="second heading hidden">
+                    Developers
+                </div>
+                <div class="profile hidden">
+                    <img id="profile-picture-1" alt="AddE">
+                        <script>
+                            // Retrieve profile picture from GitHub API
+                            const username1 = "AddeChander";
+                            fetch(`https://api.github.com/users/${username1}`)
+                                .then(response => response.json())
+                                .then(data => {
+                                    const avatarUrl = data.avatar_url;
+                                    const img = document.querySelector('#profile-picture-1');
+                                    img.src = avatarUrl;
+                                })
+                                .catch(error => {
+                                    console.error(error);
+                                    const img = document.querySelector('#profile-picture-1');
+                                    img.src = "https://www.seekpng.com/png/detail/615-6158323_http-octodex-github-com-images-red-polo-github.png";
+                                });
+                        </script>
+                    <div class="bio">
+                        Prateek was responsible for the development of the machine learning algorithms used in 
+                        the system.
+                        <br>
+                        <br>
+                        Contact:&nbsp;&nbsp;<a href="mailto:prateekchand208@gmail.com" target="_blank"><i class="fas fa-envelope-open-text"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/AddeChander" target="_blank"><i class="fab fa-github"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://linkedin.com/in/prateek-chand-7b1b08247" target="_blank"><i class="fab fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://instagram.com/prateek_chand_thakuri" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="profile hidden">
+                    <img id="profile-picture-2" alt="Saurav">
+                        <script>
+                            // Retrieve profile picture from GitHub API
+                            const username2 = "saurav-png";
+                            fetch(`https://api.github.com/users/${username2}`)
+                                .then(response => response.json())
+                                .then(data => {
+                                    const avatarUrl = data.avatar_url;
+                                    const img = document.querySelector('#profile-picture-2');
+                                    img.src = avatarUrl;
+                                })
+                                .catch(error => {
+                                    console.error(error);
+                                    const img = document.querySelector('#profile-picture-2');
+                                    img.src = "https://www.seekpng.com/png/detail/17-174125_free-hosting-with-github-pages-octopus-cat-github.png";
+                                });
+                        </script>
+                    <div class="bio">
+                        Saurav focused on designing the page and implementing the Django framework.
+                        <br>
+                        <br>
+                        Contact:&nbsp;&nbsp;<a href="mailto:sauravtiwari9011@gmail.com" target="_blank"><i class="fas fa-envelope-open-text"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://github.com/saurav-png" target="_blank"><i class="fab fa-github"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://linkedin.com/in/saurav-md" target="_blank"><i class="fab fa-linkedin"></i></a>&nbsp;&nbsp;&nbsp;<a href="https://instagram.com/saurav.gif" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="about third hidden">
+              <p>The RentPrediction system is a useful tool for anyone looking to rent an apartment in Manhattan, Brooklyn, or Queens, as it provides an accurate estimate of rent prices based on the user's desired location and apartment features. It's an excellent example of how technology can be used to simplify complex processes and make our lives easier.</p>
+            </div>
+            <div class="about last hidden">
+              <p>We hope that you find the RentPrediction system to be a helpful resource in your apartment search, and we're always open to feedback and suggestions for improvement.</p>
+            </div>
+        </div>
+        <footer>
+            <p>
+                Copyright ©
+                <script>
+                  document.write(new Date().getFullYear())
+                </script>
+                &nbsp; addechander
+                <a href="https://github.com/Addechander" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+                 & saurav
+                <a href="https://github.com/saurav-png" target="_blank">
+                    <i class="fab fa-github"></i>
+                  </a>
+              </p>
+        </footer>
+    </body>
+</html>         
